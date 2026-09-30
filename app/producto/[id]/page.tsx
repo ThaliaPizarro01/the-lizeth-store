@@ -9,6 +9,13 @@ import { DISCOUNT_ACTIVE, DISCOUNT_BADGE_SRC } from "@/lib/discounts";
 
 const WHATSAPP_NUMBER = "51907134693";
 
+// ← AGREGAR ESTO
+export function generateStaticParams() {
+  return products.map((p) => ({
+    id: p.id,
+  }));
+}
+
 function ProductDetail({ product }: { product: Product }) {
   const [slide, setSlide] = useState(0);
   const [canLeft, setCanLeft] = useState(false);
