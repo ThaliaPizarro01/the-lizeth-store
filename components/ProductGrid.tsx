@@ -28,25 +28,26 @@ function ProductCard({ p, hidden }: { p: Product; hidden?: boolean }) {
 
 export default function ProductGrid() {
   const [filter, setFilter] = useState("todos");
-  const [sort, setSort] = useState("default");
+  const [sortJoyas, setSortJoyas] = useState("default"); // ← Independiente
+  const [sortFragancias, setSortFragancias] = useState("default"); // ← Independiente
   const [showAllJoyas, setShowAllJoyas] = useState(false);
   const [showAllFragancias, setShowAllFragancias] = useState(false);
 
-  const sortProducts = (productsArray: Product[]): Product[] => {
-    if (sort === "default") return productsArray;
+  const sortProducts = (productsArray: Product[], sortType: string): Product[] => {
+    if (sortType === "default") return productsArray;
     return [...productsArray].sort((a, b) => {
       const priceA = DISCOUNT_ACTIVE ? discountedPrice(a.price) : a.price;
       const priceB = DISCOUNT_ACTIVE ? discountedPrice(b.price) : b.price;
-      return sort === "asc" ? priceA - priceB : priceB - priceA;
+      return sortType === "asc" ? priceA - priceB : priceB - priceA;
     });
   };
 
   const joyas = products.filter((p) => p.type === "joya");
-  const sortedJoyas = sortProducts(joyas);
+  const sortedJoyas = sortProducts(joyas, sortJoyas); // ← Pasa sortJoyas
   const displayedJoyas = showAllJoyas ? sortedJoyas : sortedJoyas.slice(0, ITEMS_PER_PAGE);
 
   const fragancias = products.filter((p) => p.type === "fragancia");
-  const sortedFragancias = sortProducts(fragancias);
+  const sortedFragancias = sortProducts(fragancias, sortFragancias); // ← Pasa sortFragancias
   const displayedFragancias = showAllFragancias ? sortedFragancias : sortedFragancias.slice(0, ITEMS_PER_PAGE);
 
   return (
@@ -70,8 +71,8 @@ export default function ProductGrid() {
           </div>
 
           <div className="sort-select">
-            <label htmlFor="sort-price">Ordenar por:</label>
-            <select id="sort-price" value={sort} onChange={(e) => setSort(e.target.value)}>
+            <label htmlFor="sort-price-joyas">Ordenar por:</label>
+            <select id="sort-price-joyas" value={sortJoyas} onChange={(e) => setSortJoyas(e.target.value)}>
               <option value="default">Por defecto</option>
               <option value="asc">Precio: menor a mayor</option>
               <option value="desc">Precio: mayor a menor</option>
@@ -108,7 +109,7 @@ export default function ProductGrid() {
 
         <div className="sort-select sort-select-centered">
           <label htmlFor="sort-price-fragancias">Ordenar por:</label>
-          <select id="sort-price-fragancias" value={sort} onChange={(e) => setSort(e.target.value)}>
+          <select id="sort-price-fragancias" value={sortFragancias} onChange={(e) => setSortFragancias(e.target.value)}>
             <option value="default">Por defecto</option>
             <option value="asc">Precio: menor a mayor</option>
             <option value="desc">Precio: mayor a menor</option>
