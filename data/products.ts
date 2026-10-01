@@ -20,7 +20,7 @@ export const products: Product[] = [
   { id: "pulsera-estrella", name: "Pulsera Estrella", type: "joya", categories: ["pulsera"], label: "Pulsera", price: 40,
     description: "Un detalle sutil y femenino para tu día a día.",
     image: j("pulsera2.png"), images: [j("pulsera2.png"), j("pulsera2a.png")] },
-  { id: "espiral-dorado", name: "Espiral Dorado", type: "joya", categories: ["collar"], label: "Collar", price: 40,
+  { id: "espiral-dorado", name: "Collar Espiral Dorado", type: "joya", categories: ["collar"], label: "Collar", price: 40,
     description: "Collar de cadena fina con dije espiral, perfecto para uso diario.",
     image: j("collar1.png"), images: [j("collar1.png"), j("collar1a.png")] },
   { id: "collar-valerie", name: "Collar Valerie", type: "joya", categories: ["collar"], label: "Collar", price: 35,

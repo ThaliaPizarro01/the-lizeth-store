@@ -473,8 +473,8 @@ nav a:hover {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-bottom: 100px;
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .product-card {
@@ -586,9 +586,7 @@ nav a:hover {
   border-color: #d5a95c;
 }
 
-.jewelry-product-hidden {
-  display: none !important;
-}
+
 
 /* =========================
    ORDENAMIENTO POR PRECIO
@@ -2149,6 +2147,11 @@ footer {
     padding: 10px 24px;
     font-size: 14px;
   }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2202,6 +2205,10 @@ footer {
   .footer-section h4 {
     font-size: 15px;
   }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -2231,6 +2238,12 @@ footer {
 
   .detail-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -2311,7 +2324,7 @@ footer {
   }
 
   .products-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .product-description {

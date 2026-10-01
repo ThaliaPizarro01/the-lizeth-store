@@ -43,7 +43,8 @@ export default function ProductGrid() {
   };
 
   const joyas = products.filter((p) => p.type === "joya");
-  const sortedJoyas = sortProducts(joyas, sortJoyas); // ← Pasa sortJoyas
+  const filteredJoyas = filter === "todos" ? joyas : joyas.filter((p) => p.categories.includes(filter));
+  const sortedJoyas = sortProducts(filteredJoyas, sortJoyas);
   const displayedJoyas = showAllJoyas ? sortedJoyas : sortedJoyas.slice(0, ITEMS_PER_PAGE);
 
   const fragancias = products.filter((p) => p.type === "fragancia");
@@ -82,8 +83,7 @@ export default function ProductGrid() {
 
         <div className="products-grid">
           {displayedJoyas.map((p) => (
-            <ProductCard key={p.id} p={p}
-              hidden={filter !== "todos" && !p.categories.includes(filter)} />
+            <ProductCard key={p.id} p={p} />
           ))}
         </div>
 
