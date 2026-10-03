@@ -48,12 +48,18 @@ export const products: Product[] = [
     description: "Juego de collar Valerie y aretes Bianca. El conjunto perfecto para lucir un estilo fresco, elegante y luminoso.",
     image: j("set-brisa-azul.png"), images: [j("Aretes-Bianca-1.png"), j("Collar-Valerie-1.png")] },
 
-  { id: "love-spell", name: "Love Spell", type: "fragancia", categories: [], label: "Victoria's Secret", price: 65,
-    description: "Durazno, flor de cerezo y jazmín. El clásico ícono de Victoria's Secret.",
-    image: f("love-spell.png"), images: [f("love-spell.png"), f("love-spell.png")] },
-  { id: "aqua-kiss", name: "Aqua Kiss", type: "fragancia", categories: [], label: "Victoria's Secret", price: 65,
-    description: "Melón y cítricos, ligero y energizante, con shimmer.",
-    image: f("aqua-kiss.png"), images: [f("aqua-kiss.png"), f("aqua-kiss.png")] },
+  { id: "love-spell", name: "Love Spell", type: "fragancia", categories: ["shimmer"], label: "Victoria's Secret", price: 65,
+    description: "Frutal. Floral. Romántico. Dulce. Femenino. Clásico, con shimmer.",
+    image: f("love-spell-shimmer.png"), images: [f("love-spell-shimmer.png"), f("love-spell-shimmer.png")] },
+  { id: "aqua-kiss", name: "Aqua Kiss", type: "fragancia", categories: ["shimmer"], label: "Victoria's Secret", price: 65,
+    description: "Fresco. Acuático. Ligero. Limpio. Refrescante, con shimmer.",
+    image: f("aqua-kiss-shimmer.png"), images: [f("aqua-kiss-shimmer.png"), f("aqua-kiss-shimmer.png")] },
+  { id: "coconut-passion", name: "Coconut Passion", type: "fragancia", categories: [], label: "Victoria's Secret", price: 65,
+    description: "Cremoso. Tropical. Dulce. Cálido. Coco. Vainilla.",
+    image: f("coconut-passion.png"), images: [f("coconut-passion.png"), f("coconut-passion.png")] },
+  { id: "velvet-petals", name: "Velvet Petals", type: "fragancia", categories: ["shimmer"], label: "Victoria's Secret", price: 65,
+    description: "Floral. Suave. Dulce. Delicado. Femenino. Envolvente, con shimmer.",
+    image: f("velvet-petals-shimmer.png"), images: [f("velvet-petals-shimmer.png"), f("velvet-petals-shimmer.png")] },
 ];
 
 export const jewelryFilters = [
@@ -62,4 +68,10 @@ export const jewelryFilters = [
   { key: "pulsera", label: "Pulseras" },
   { key: "anillo", label: "Anillos" },
   { key: "aretes", label: "Aretes" },
+];
+
+export const fragranceFilters = [
+  { key: "todos", label: "Todas" },
+  { key: "shimmer", label: "Con Shimmer" },
+  { key: "no-shimmer", label: "Sin Shimmer" },
 ];
