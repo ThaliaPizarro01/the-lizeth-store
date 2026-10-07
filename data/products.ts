@@ -57,9 +57,9 @@ export const products: Product[] = [
   { id: "coconut-passion", name: "Coconut Passion", type: "fragancia", categories: [], label: "Victoria's Secret", price: 65,
     description: "Cremoso. Tropical. Dulce. Cálido. Coco. Vainilla.",
     image: f("coconut-passion.png"), images: [f("coconut-passion.png"), f("coconut-passion.png")] },
-  { id: "velvet-petals", name: "Velvet Petals", type: "fragancia", categories: ["shimmer"], label: "Victoria's Secret", price: 65,
-    description: "Floral. Suave. Dulce. Delicado. Femenino. Envolvente, con shimmer.",
-    image: f("velvet-petals-shimmer.png"), images: [f("velvet-petals-shimmer.png"), f("velvet-petals-shimmer.png")] },
+  // { id: "velvet-petals", name: "Velvet Petals", type: "fragancia", categories: ["shimmer"], label: "Victoria's Secret", price: 65,
+  //   description: "Floral. Suave. Dulce. Delicado. Femenino. Envolvente, con shimmer.",
+  //   image: f("velvet-petals-shimmer.png"), images: [f("velvet-petals-shimmer.png"), f("velvet-petals-shimmer.png")] },
 ];
 
 export const jewelryFilters = [
