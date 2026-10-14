@@ -1,12 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
 
+// Cambia a true para volver a mostrar el slide de oferta/descuento
+const SHOW_DISCOUNT = false;
+
+const DOT_LABELS = ["Primera imagen", "Nueva colección", ...(SHOW_DISCOUNT ? ["Oferta 10% de descuento"] : [])];
+const TOTAL_SLIDES = DOT_LABELS.length;
+
 export default function Hero() {
   const [current, setCurrent] = useState(0);
 
   // Se reinicia cada vez que cambia el slide (automático o por clic en un punto)
   useEffect(() => {
-    const t = setTimeout(() => setCurrent((c) => (c + 1) % 3), 3000);
+    const t = setTimeout(() => setCurrent((c) => (c + 1) % TOTAL_SLIDES), 3000);
     return () => clearTimeout(t);
   }, [current]);
 
@@ -14,7 +20,7 @@ export default function Hero() {
 
   return (
     <section className="hero" id="inicio">
-      {[1, 2, 3].map((n, i) => (
+      {DOT_LABELS.map((_, i) => i + 1).map((n, i) => (
         <div key={n} className={`hero-slide slide-${n} ${current === i ? "active" : ""}`} />
       ))}
 
@@ -32,15 +38,17 @@ export default function Hero() {
           <p>Nuevos detalles para hacerte brillar.</p>
         </div>
 
-        <div className="hero-discount" style={show(2)}>
-          <span className="limited-offer">Oferta por tiempo limitado</span>
-          <h2>10% de descuento<br /><span>en todos los productos</span></h2>
-          <p>Aprovecha antes de que se acabe.</p>
-          <a href="#catalogo" className="hero-button hero-button-discount">VER OFERTA</a>
-        </div>
+        {SHOW_DISCOUNT && (
+          <div className="hero-discount" style={show(2)}>
+            <span className="limited-offer">Oferta por tiempo limitado</span>
+            <h2>10% de descuento<br /><span>en todos los productos</span></h2>
+            <p>Aprovecha antes de que se acabe.</p>
+            <a href="#catalogo" className="hero-button hero-button-discount">VER OFERTA</a>
+          </div>
+        )}
 
         <div className="hero-dots">
-          {["Primera imagen", "Nueva colección", "Oferta 10% de descuento"].map((label, i) => (
+          {DOT_LABELS.map((label, i) => (
             <button key={i} className={`hero-dot ${current === i ? "active" : ""}`} aria-label={label} onClick={() => setCurrent(i)} />
           ))}
         </div>
