@@ -25,7 +25,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "The Lizeth Store | Joyas Premium y Fragancias en Perú",
   description:
-    "The Lizeth Store - Joyas de acero inoxidable premium y fragancias importadas en Perú. Collares, aretes, pulseras, anillos y perfumes originales para mujeres profesionales. Envíos a Lima y provincias.",
+    "The Lizeth Store - Joyas de acero inoxidable premium y fragancias importadas en Perú. Collares, aretes, pulseras, anillos y perfumes originales para mujeres que quieren brillar cada día, y para quienes buscan un regalo especial. Envíos a Lima y provincias.",
   keywords:
     "joyas de acero inoxidable perú, joyas premium lima, fragancias importadas perú, perfumes originales, tienda online joyas, regalos para mujeres",
   authors: [{ name: "The Lizeth Store" }],

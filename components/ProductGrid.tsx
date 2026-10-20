@@ -100,11 +100,11 @@ export default function ProductGrid() {
 
       <div id="fragancias">
         <div className="category-heading">
-          <h2>🌸 Fragancias Victoria Secret</h2>
+          <h2>🌸 Fragancias Victoria's Secret</h2>
           <span>NUESTRA COLECCIÓN</span>
         </div>
         <div className="category-description">
-          Fragancias importadas 100% originales de Victoria Secret, traídas directamente desde USA
+          Fragancias importadas 100% originales de Victoria's Secret, traídas directamente desde USA
         </div>
 
         <div className="sort-select sort-select-centered">
