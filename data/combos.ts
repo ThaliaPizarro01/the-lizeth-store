@@ -46,13 +46,13 @@ export const combos: Combo[] = [
     images: [c("Armonia-de-Primavera.jpg"), "/imagenes/joyas/collar1.png", "/imagenes/joyas/Anillo-Margaret-1.png"],
     includes: ["Collar Espiral Dorado", "Anillo Margareth"]
   },
-  {
-    id: "combo-arurum-esencial", name: "Combo Aurum Esencial", price: 40,
-    description: "Una pulsera de cadena gruesa con dije de corazón y un anillo abierto con bolitas doradas. \nDos piezas que se combinan con todo y se llevan juntas o por separado.",
-    image: c("Combo-Aurum-Esencial.jpg"),
-    images: [c("Combo-Aurum-Esencial.jpg"), "/imagenes/joyas/Pulsera-Esencia1.jpg", "/imagenes/joyas/anillo2.png"],
-    includes: ["Pulsera Esencia", "Anillo Party"]
-  },
+  // {
+  //   id: "combo-arurum-esencial", name: "Combo Aurum Esencial", price: 40,
+  //   description: "Una pulsera de cadena gruesa con dije de corazón y un anillo abierto con bolitas doradas. \nDos piezas que se combinan con todo y se llevan juntas o por separado.",
+  //   image: c("Combo-Aurum-Esencial.jpg"),
+  //   images: [c("Combo-Aurum-Esencial.jpg"), "/imagenes/joyas/Pulsera-Esencia1.jpg", "/imagenes/joyas/anillo2.png"],
+  //   includes: ["Pulsera Esencia", "Anillo Party"]
+  // },
   {
     id: "combo-aura-rosa", name: "Combo Aura Rosa", price: 52,
     description: "Unos aretes con piedra rosa tallada y un anillo con textura en espiral. \nDos piezas para darle un toque especial a tu look.",
