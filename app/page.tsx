@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ProductGrid from "@/components/ProductGrid";
+import ComboGrid from "@/components/ComboGrid";
 import Counter from "@/components/Counter";
 import FAQ from "@/components/FAQ";
 import { About, Categories, HowToBuy, Payments } from "@/components/StaticSections";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <Categories />
         <ProductGrid />
+        <ComboGrid />
         <HowToBuy />
         <Payments />
         <About />

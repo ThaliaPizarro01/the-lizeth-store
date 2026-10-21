@@ -6,6 +6,7 @@ const links = [
   ["/#inicio", "Inicio"],
   ["/#joyas", "Joyas"],
   ["/#fragancias", "Fragancias"],
+  ["/#combos", "Combos"],
   ["/#pagos", "Formas de pago"],
   ["/#nosotros", "Nosotros"],
 ];

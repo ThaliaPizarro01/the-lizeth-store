@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 
 import { MetadataRoute } from 'next';
 import { products } from '@/data/products';
+import { combos } from '@/data/combos';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://thelizethstore.com';
@@ -42,5 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...productPages];
+  const comboPages = combos.map((combo) => ({
+    url: `${baseUrl}/combo/${combo.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...productPages, ...comboPages];
 }

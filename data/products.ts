@@ -32,7 +32,7 @@ export const products: Product[] = [
   { id: "aretes-fashie", name: "Aretes Fashie", type: "joya", categories: ["aretes"], label: "Aretes", price: 36,
     description: "Piedra rosa tallada con marco dorado. Un detalle que da color a tu look sin esfuerzo.",
     image: j("Aretes-Fashie5.jpg"), images: [j("Aretes-Fashie5.jpg"), j("Aretes-Fashie5a.jpg")] },
-  { id: "anillo-party", name: "Anillo Pary", type: "joya", categories: ["anillo"], label: "Anillo", price: 20,
+  { id: "anillo-party", name: "Anillo Party", type: "joya", categories: ["anillo"], label: "Anillo", price: 20,
     description: "Dos bolitas doradas que hacen la diferencia. Abierto y regulable, se ajusta a tu talla y se lleva solo o combinado con otros anillos.",
     image: j("anillo2.png"), images: [j("anillo2.png"), j("anillo2a.png")] },
   { id: "collar-rispery", name: "Collar Rispery", type: "joya", categories: ["collar"], label: "Collar", price: 28,
